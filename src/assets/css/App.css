@@ -8,3 +8,41 @@
 .title_hover:hover {
     background: rgba(255, 255, 255, 0.1);
 }
+
+.phone {
+    display: flex;
+    justify-content: space-around;
+}
+
+.phone-div {
+    height: 80vh;
+}
+
+@media (max-width: 640px) {
+    .phone {
+        justify-content: space-between;
+    }
+
+    .phone-form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .phone {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .phone-form {
+        width: 90%;
+    }
+
+    .phone-div {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 330px) {
+    
+}

@@ -14,17 +14,16 @@ function App() {
     <>
       <BackgroundImage />
       
-      <div className='flex justify-around items-center p-6'>
+      <div className='phone items-center p-6'>
         <Title /> 
         <Languages />
       </div>
 
       <div 
-        className='relative w-full flex relative'
-        style={{ height: '80vh'}}
+        className='phone-div relative w-full flex relative'
       >
         <div 
-          className='backdropFilter absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-2xl bg-opacity-50'
+          className='phone-form backdropFilter absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-2xl bg-opacity-50'
         >
           <Form />
         </div>
