@@ -1,4 +1,4 @@
-import background_image01 from '../data/background_image.js'
+import background_image01 from '../../data/background_image'
 
 export default function BackgroundImage() {
     return (

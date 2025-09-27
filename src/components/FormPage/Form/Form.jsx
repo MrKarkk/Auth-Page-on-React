@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { useLanguage } from "../Language/LanguageContext.jsx";
+import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../../FormPage/Language/LanguageContext.jsx";
 import Loading from './Loading.jsx';
 import ErrorMessage from './ErrorMessage.jsx';
-import dictionary from "../../data/dictionary.js";
-import '../../assets/css/form.css'
+import { studentData } from "../../../data/account.js"
+import dictionary from "../../../data/dictionary.js";
+import '../../../assets/css/Auth/form.css'
 
 
 export default function Form() {
@@ -13,23 +15,30 @@ export default function Form() {
     const [loading, setLoading] = useState(false);
     const { selected } = useLanguage();
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
-    // Обработка отправки формы
+
     const handleSubmit = async (e) => {
         e.preventDefault(); // не перезагружать страницу
         setError(""); // сбрасываем ошибку
         setLoading(true); // показываем загрузку
 
         try {
-        // эмуляция запроса на сервер
             await new Promise((resolve, reject) => {
-                setTimeout(() => {
-                if (login === "admin" && password === "admin") {
-                    reject(new Error("Успешный вход"));
+            setTimeout(() => {
+                // ищем юзера
+                const user = studentData.find(
+                    (u) => u.login === login && u.password === password
+                );
+
+                if (user) {
+                    resolve(user); // ✅ успех
                 } else {
-                    reject(new Error("Неверный логин или пароль"));
+                    reject(new Error("Неверный логин или пароль")); // ❌ ошибка
                 }
-                }, 10); // задержка для имитации загрузки
+            }, 2000);
+            }).then((login) => {
+                navigate("/home", { state: { login } });
             });
 
             // если успех:

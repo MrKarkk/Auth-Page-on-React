@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useLanguage } from "./LanguageContext.jsx";
-import languages from "../../data/languages.js";
-import dictionary from "../../data/dictionary.js";
-import '../../assets/css/language.css';
+import languages from "../../../data/languages.js";
+import dictionary from "../../../data/dictionary.js";
+import '../../../assets/css/Auth/language.css';
 
 
 export default function Languages() {

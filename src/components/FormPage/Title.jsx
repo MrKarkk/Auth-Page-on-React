@@ -1,5 +1,5 @@
 import { useLanguage } from "./Language/LanguageContext.jsx";
-import dictionary from "../data/dictionary.js";
+import dictionary from "../../data/dictionary.js";
 
 export default function Title() {
     const { selected } = useLanguage();

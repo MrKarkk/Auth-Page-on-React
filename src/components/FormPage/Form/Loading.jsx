@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/css/loading.css";
+import "../../../assets/css/Auth/loading.css";
 
 /**
  * Loading — анимированный SVG spinner + текст
