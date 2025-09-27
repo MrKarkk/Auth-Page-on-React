@@ -4,7 +4,7 @@ import { useLanguage } from "../../FormPage/Language/LanguageContext.jsx"; // к
 import Loading from "./Loading.jsx";
 import ErrorMessage from "./ErrorMessage.jsx";
 import dictionary from "../../../data/dictionary.js";
-import { useAuth } from "../hooks/useAuth"; // кастомный хук для авторизации
+import { useAuth } from "../../../hooks/useAuth.js"; // кастомный хук для авторизации
 import "../../../assets/css/Auth/form.css"; // стили формы
 
 
@@ -64,6 +64,7 @@ export default function Form() {
                 {/* Кнопка показать/скрыть пароль */}
                 <button
                 type="button"
+                style={{top: "6px", right: "6px"}}
                 onClick={() => setShow((s) => !s)}
                 className="show absolute right-1 top-1/2 -translate-y-1/2 flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 bg-white/70 text-sm"
                 >

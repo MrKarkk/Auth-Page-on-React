@@ -18,7 +18,7 @@ export function useAuth() {
             setTimeout(() => {
             // ищем юзера
             const user = studentData.find(
-                (u) => u.username === login && u.password === password
+                (u) => u.login === login && u.password === password
             );
 
             if (user) {
