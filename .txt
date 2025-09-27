@@ -1,0 +1,24 @@
+src/
+├── components/     # UI-компоненты (Form, Button, Header...)
+├── hooks/          # кастомные хуки (useAuth, useTheme, useLanguage...)
+├── pages/          # страницы (Auth, Home, Dashboard...)
+├── data/           # моковые данные (account.js)
+├── App.jsx
+└── main.jsx
+
+src/
+ ├── assets/
+ │    ├── css/
+ │    │    ├── globals.css        # глобальные стили (reset, body, html)
+ │    │    ├── form.css           # стили для Form.jsx
+ │    │    ├── home.css           # стили для Home.jsx
+ │    │    └── variables.css      # переменные (цвета, шрифты)
+
+src/
+ ├── components/
+ │    ├── Form/
+ │    │    ├── Form.jsx
+ │    │    └── Form.module.css
+ │    ├── Button/
+ │    │    ├── Button.jsx
+ │    │    └── Button.module.css

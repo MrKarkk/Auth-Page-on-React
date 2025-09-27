@@ -1,12 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Auth from './Pages/Auth'
-import Home from './Pages/Home';
-
+import Auth from './pages/Auth'
+import Home from './pages/Home';
+import PrivateRoute from './components/FormPage/Form/PrivateRoute'
 
 import './assets/css/App.css'
 import './assets/css/App/backdropFilter.css'
+
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
     <Router basename="/Auth-Page-on-React">
       <Routes>
         <Route path="/" element={<Auth />} />
-        <Route path="/home" element={<Home/>} />
+        <Route path="/home" element={<Home element={<PrivateRoute> <Home /> </PrivateRoute>}/>} />
       </Routes>
     </Router>
     </>
