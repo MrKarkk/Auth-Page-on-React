@@ -17,5 +17,8 @@ This project provides a clean and responsive login/register page with modern sty
 Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/your-username/auth-page.git
+```
 cd auth-page
+```bash
 npm install
+```
